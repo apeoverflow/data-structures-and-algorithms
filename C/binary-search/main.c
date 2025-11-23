@@ -21,9 +21,13 @@ int main(void) {
   for (int i = 0; i < SIZE; i++) {
     arr[i] = i * 10;
   }
-  int needle = 40;
+  int needle = 20;
   int idx = binarySearch(arr, SIZE, needle);
-  if (idx != -1)
-    printf("idx: %d", idx);
+  if (idx != -1) {
+    printf("idx: %d\n", idx);
+    printf("element at idx: %d --> %d\n", idx, arr[idx]);
+  } else {
+    printf("search value not found\n");
+  }
   return 0;
 }
