@@ -12,3 +12,26 @@ void insertionSort(int arr[], int n) {
     arr[j + 1] = key;
   }
 }
+
+void printArray(int arr[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\n");
+}
+
+int main(void) {
+  int arr[] = {5, 2, 9, 1, 5, 6};
+  int n = sizeof(arr) / sizeof(arr[0]);
+
+  printf("Before sort: ");
+  printArray(arr, n);
+
+  insertionSort(arr, n);
+
+  printf("After sort:  ");
+  printArray(arr, n);
+
+  return 0;
+}
